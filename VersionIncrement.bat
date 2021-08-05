@@ -12,13 +12,16 @@ REM     GNU General Public License for more details.
 
 REM You should have received a copy of the GNU General Public License
 REM     along with this program.  If not, see <https://www.gnu.org/licenses/>.
-goto start
+
+
+
+echo Version Increment for Visual Studio
+echo Version 1.1.3.0 - 05-08-2021
+echo Author daniznf
+echo.
+goto thestart
 
 :usage
-echo Version Increment for VisualStudio
-echo Version 1.1.2.0 - 05-08-2021
-echo Author daniznf
-
 echo Use this script to automatically increment Build Number and or Revision in Visual Studio projects
 echo In Visual Studio Pre-Build event command line put a line like this:
 echo.
@@ -52,7 +55,7 @@ REM Please specify any or both /B and /R
 REM ###################################################################
 REM You can change following values according to your needs
 
-:start
+:thestart
 set assemblyFile=%1\Properties\AssemblyInfo.cs
 set assemblyFileBackup=%1\Properties\AssemblyInfo.cs.bkp
 
