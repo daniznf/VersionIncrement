@@ -16,7 +16,7 @@ REM     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
 echo Version Increment for Visual Studio
-echo Version 1.1.3.0 - 05-08-2021
+echo Version 1.1.4.0 - August 2021
 echo Author daniznf
 echo.
 goto thestart
@@ -97,7 +97,7 @@ if %incrementRevision%==yes set /a aRevision=%aRevision%+1
 set aVersion=%aMajor%.%aMinor%.%aBuild%.%aRevision%
 echo New AssemblyVersion %aVersion%
 
-echo %openingAVersion%"%aVersion%"%closingAVersion% >> %assemblyFile%
+echo %openingAVersion%"%aVersion%"%closingAVersion%>> %assemblyFile%
 
 REM AssemblyFileVersion
 for /f "tokens=1,2,3 delims=()" %%a in ('findstr AssemblyFileVersion %assemblyFileBackup%') do set openingAFVersion=%%~a(
@@ -114,7 +114,7 @@ if %incrementRevision%==yes set /a aFRevision=%aFRevision%+1
 set aFVersion=%aFMajor%.%aFMinor%.%aFBuild%.%aFRevision%
 echo New AssemblyFileVersion %aFVersion%
 
-echo %openingAFVersion%"%aFVersion%"%closingAFVersion% >> %assemblyFile%
+echo %openingAFVersion%"%aFVersion%"%closingAFVersion%>> %assemblyFile%
 
 goto cleanEnd
 
